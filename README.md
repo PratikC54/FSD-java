@@ -9,8 +9,11 @@ It’s a mix of core Java fundamentals, OOP concepts, data structures, and backe
 ## 📁 Project Structure
 FSD-java/
 │
-├── Date/ src/ # Source code files
+
+├──Date/ src/ # Source code files
+
 ├── assignments/ # Class/lab assignments and exercises
+
 └── README.md # You're here!
 
 ---
