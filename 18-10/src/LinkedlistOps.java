@@ -28,7 +28,7 @@ public class LinkedlistOps {
 
         //Reverse traversal
         Iterator<Integer> it = l.descendingIterator();
-        System.out.println("Reverse traversing");
+        System.out.print("Reverse traversing : ");
         while (it.hasNext())
             System.out.print(it.next()+" ");
 
