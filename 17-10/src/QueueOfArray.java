@@ -29,6 +29,7 @@ public class QueueOfArray {
         arr[front]=0;
         return arr[front++];
     }
+
     public int peek(){
         return arr[front];
     }
@@ -76,9 +77,6 @@ public class QueueOfArray {
         System.out.println("Size of queue : "+queue1.size());
         System.out.println("element at front : "+queue1.peek());
         queue1.display();
-
-
-
 
     }
 }
