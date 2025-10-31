@@ -31,7 +31,7 @@ public class Trees {
 
     static int max(Node root) {
         if (root == null) return Integer.MIN_VALUE;
-
+//            int a=root.data;
             int leftMax = max(root.left);
             int rightMax = max(root.right);
 
