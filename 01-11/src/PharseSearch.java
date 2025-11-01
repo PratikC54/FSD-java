@@ -7,8 +7,8 @@ class TrieNode{
         child = new TrieNode[25];
     }
 }
-public class TrieDS {
 
+public class PharseSearch {
     public static TrieNode root = new TrieNode();
     static void insert(String str) {
         TrieNode temp = root;
@@ -21,18 +21,6 @@ public class TrieDS {
         temp.EndOfWord=true;
     }
 
-
-    public static void display(TrieNode root , String str) {
-        if(root.EndOfWord) System.out.print(str+" ");
-        for(int i=0;i<25;i++) {
-            if(root.child[i]!=null) {
-                char ch = (char) (i+'a');
-                display(root.child[i],str+ch);
-            }
-        }
-    }
-
-
     public static boolean search(String str) {
         TrieNode temp = root;
         for(char c : str.toCharArray()){
@@ -44,13 +32,19 @@ public class TrieDS {
         return temp.EndOfWord;
     }
 
+    public static boolean searchPhrase(String key) {
+        if(key.isEmpty()) return true;
+        for(int i=0;i<=key.length();i++){
+            String first = key.substring(0,i);
+            String second = key.substring(i);
+            if (search(first) && searchPhrase(second)) return true;
+        }
+        return false;
+    }
     public static void main(String[] args) {
         String[] str = {"An","and","ant","ball","bat"};
         for(String s : str) insert(s);
-        display(root,"");
-        if (search("an")) System.out.println("\nFound successfully");
-        else System.out.println("\nNot present in trie....");
-
         System.out.println(searchPhrase("anand"));
+
     }
 }
