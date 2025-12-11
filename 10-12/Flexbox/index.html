@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlexBox</title>
+    <style>
+      .title {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 30px;
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f2f2f2;
+        padding: 25px;
+      }
+      .container {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .box{
+        background-color: white;
+        border-radius: 10px;
+        padding: 15px;
+        width: 220px;
+        box-shadow: 0 2px 15px rgba(201, 13, 13, 0.1);
+        text-align: center;
+        transition: 0.6s;
+      }
+      .box img {
+        width: 100%;
+        height: 150px;
+        object-fit: fill;
+        border-radius: 5px;
+        transition: 0.6s;
+      }
+      .box p {
+        color: gray;
+        font-size: 14px;
+      }
+      .box:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 10px rgba(1, 153, 54, 0.2);
+      }
+      
+      button {
+        background-color: rgb(29, 9, 209);
+        border-radius: 5px;
+        padding: 10px;
+        transition: 0.6s;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 class="title">⭐ Flexbox Product Gallery ⭐</h2>
+    <div class="container">
+      <div class="box">
+        <img
+          src="https://www.portronics.com/cdn/shop/files/Portronics_Muff_M3_best_headphones_under_5000.jpg?v=1744893854"
+          alt=""
+        />
+        <h3>Wireless headphone</h3>
+        <p>High quality sound with ANC</p>
+        <button>Buy Now</button>
+      </div>
+      <div class="box">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9hfvZr4YFSZ0aalRMrkEHcmTen2dJJnTLXg&s"
+          alt=""
+        />
+        <h3>Smart camera</h3>
+        <p>Capture moments with 4K resolution</p>
+        <button>Buy Now</button>
+      </div>
+      <div class="box">
+        <img
+          src="https://www.portronics.com/cdn/shop/files/Hydra-10_1200x1200_Brown_1.jpg?v=1733831965"
+          alt=""
+        />
+        <h3>Gaming Keyboard</h3>
+        <p>RGB mechanical keyboard with customizable keys</p>
+        <button>Buy Now</button>
+      </div>
+      <div class="box">
+        <img
+          src="https://rukminim2.flixcart.com/image/704/844/xif0q/smartwatch/t/e/y/-original-imagtcnuq6xsnhhe.jpeg?q=90&crop=false"
+          alt=""
+        />
+        <h3>Smart watch</h3>
+        <p>Everything on your wrist </p>
+        <button id="buy">Buy Now</button>
+      </div>
+    </div>
+  </body>
+</html>

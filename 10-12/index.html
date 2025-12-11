@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parallex</title>
+    <style>
+        *{
+            animation: in;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        nav {
+            position: fixed;
+            width: 100%;
+            background-color: #47bee258;
+            color: rgb(16, 1, 1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            z-index: 10;
+            border-radius: 15px;
+            margin-top: 5px;
+        }
+        nav ul {
+            list-style: none;
+            gap:30px;
+            
+        }
+        nav ul li {
+            display: inline-block;
+            padding: 10px;
+        }
+        nav ul li a {
+            color: rgb(34, 1, 1);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .parallex {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .overlay {
+            background: rgb(234, 234, 236);
+            padding: 50px;
+            border-radius: 10px;
+            text-align: center;
+
+        }
+        .overlay h1 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+        .overlay p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        #Beach{
+            background-image: url(https://media.istockphoto.com/id/610041376/photo/beautiful-sunrise-over-the-sea.jpg?s=612x612&w=0&k=20&c=R3Tcc6HKc1ixPrBc7qXvXFCicm8jLMMlT99MfmchLNA=);
+        }
+        #Mountain {
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMCZjR8aogO0sh4hc91K0BVmbI3bRBp0WsHA&s);
+        }
+        #City {
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSFZPvNLI7dX4YfZfTQZ-oV2CDb57E7LGFhQ&s);
+        }
+        .content {
+            padding: 50px;
+        }
+        .btn {
+            background-color: #e30f0f;
+            border-radius: 7px;
+            text-decoration: none;
+            color:white;
+            padding: 10px 20px;
+        }
+        .btn:hover {
+            background-color: #b70c0c;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <h2>Travelco</h2>
+        <ul>
+            <li><a href="#Beach">Beach</a></li>
+            <li><a href="#Mountain">Mountain</a></li>
+            <li><a href="#City">City</a></li>
+        </ul>
+    </nav>
+    <div class="parallex" id="Beach">
+        <div class="overlay">
+            <h1>Relax at beach</h1>
+            <p>Feel the sand under your feet and feel the waves around you.</p>
+            <a href="#Mountain" class="btn">Explore more</a>
+        </div>
+    </div>
+    <section class="content">
+        <h2>About beach holiday</h2>
+        <p>Beach holidays are perfect for relaxing and enjoying nature . You can swim , surf and sunshine.</p>
+    </section>
+
+    <div class="parallex" id="Mountain">
+        <div class="overlay">
+            <h1>Adventure in mountain</h1>
+            <p>Hike , trek and discover breathtakinf views.</p>
+            <a href="#City" class="btn">Visit the city</a>
+        </div>
+    </div>
+    <section class="content">
+        <h2>Mountain Adventures</h2>
+        <p>Mountains offer a perfect escape for adventure lovers. Tracking and exploring Lorem ipsum dolor sit amet.</p>
+    </section>
+
+    <div class="parallex" id="City">
+        <div class="overlay">
+            <h1>Explore the city</h1>
+            <p>Experience the cu;ture , food and nightlife of vibrent cities.</p>
+            <a href="#Beach" class="btn">Back to beach</a>
+        </div>
+    </div>
+    <section class="content">
+        <h2>About beach holiday</h2>
+        <p>Beach holidays are perfect for relaxing and enjoying nature . You can swim , surf and sunshine.</p>
+    </section>
+</body>
+</html>
