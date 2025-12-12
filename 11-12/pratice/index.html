@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        scroll-behavior: smooth;
+      }
+      #head {
+        background-color: #2d447d;
+        color: white;
+      }
+      #head h1 {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+      }
+      #head nav {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+      }
+      #head nav a {
+        display: inline;
+        justify-content: center;
+        align-content: center;
+        font-weight: bold;
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+      }
+      #head nav a:hover {
+        text-decoration: underline;
+      }
+      hr {
+        height: 3px;
+        margin: 1em 0;
+        border: none;
+        background-color: #253d8e;
+      }
+      #Course {
+        padding: 10px;
+      }
+      .container {
+        max-width: 900px;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1rem;
+        margin: auto;
+      }
+      section {
+        margin-bottom: 3rem;
+      }
+      section h2 {
+        margin-bottom: 10px;
+      }
+      .cources, .Instructor {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        flex-direction: column;
+        gap: 20px;
+      }
+      .cards {
+        background-color: #f5f1f1;
+        padding: 30px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: #c6262688 2px 4px 3px 0px;
+      }
+      .cards:hover {
+        transform: scale(1.05);
+        transition: 0.5s;
+      }
+      footer {
+        background-color: #2d447d;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="head">
+      <h1>Learn & Grow</h1>
+      <nav>
+        <a href="#Course">Course</a>
+        <a href="#Instructor">Instructor</a>
+        <a href="#Contact">Contact</a>
+      </nav>
+    </header>
+    <div class="container">
+      <section id="Course">
+        <h2>Our Cources</h2>
+        <hr />
+        <div class="cources">
+          <div class="cards">
+            <h3>Math Basics</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+          </div>
+          <div class="cards">
+            <h3>Science Fundamentals</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+          <div class="cards">
+            <h3>Web Development</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Repellendus.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="Instructor">
+        <h2>Meet Our Instructor</h2>
+        <hr />
+        <div class="Instructor">
+          <div class="cards">
+            <h3>Pratik senapati</h3>
+            <p>Lorem ipsum dolor sit amet hello.</p>
+          </div>
+          <div class="cards">
+            <h3>Pradeep Nayak</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+          <div class="cards">
+            <h3>Jagannath Pradhan</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Repellendus.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="Contact">
+        <h2>Contact Us</h2>
+        <hr />
+          <p>For questions or enrollment email us at <a href="mailto:info@learnandgrow.com">info@learnandgrow.com</a></p>
+        </div>
+      </section>
+    </div>
+    <footer>&COPY; 2025 Learn & Grow Education</footer>
+  </body>
+</html>
