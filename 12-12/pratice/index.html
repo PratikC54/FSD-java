@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pratice website</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background-color: #ffffff;
+        color: #333;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      header {
+        background-color: #ffffff;
+        padding: 20px 5%;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        width: 100%;
+        top: 0;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      nav h2 {
+        font-size: 1.5em;
+        font-weight: bold;
+        color: #3a74c4;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+      }
+
+      nav ul li {
+        margin-left: 20px;
+      }
+
+      nav ul li a {
+        font-size: 1em;
+        font-weight: 500;
+        padding: 5px 10px;
+        transition: color 0.3s;
+      }
+
+      nav ul li a:hover {
+        color: #4caf50;
+      }
+
+      section {
+        padding: 80px 5%;
+        margin: 0 auto;
+        text-align: center;
+        background-color: #d2caca;
+      }
+
+      section h2 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      section p {
+        font-size: 1.1em;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+
+      button {
+        background-color: #092e84;
+        color: white;
+        padding: 12px 25px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+        font-weight: bold;
+        transition: background-color 0.3s;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+
+      .home {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        gap: 40px;
+        background-color: #5960da;
+        color: #ddd1d1;
+      }
+
+      .home .text {
+        flex: 1;
+      }
+
+      .home .text h2 {
+        color: #ede4e4;
+        font-size: 3em;
+        margin-bottom: 15px;
+      }
+
+      .home .text p {
+        font-size: 1.2em;
+        margin-bottom: 30px;
+      }
+
+      .home img {
+        max-width: 400px;
+        height: auto;
+        border-radius: 10px;
+        object-fit: cover;
+      }
+
+      .section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        flex-direction: row;
+        gap: 40px;
+        background-color: #ffffff;
+        padding: 80px 5%;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .section img {
+        max-width: 350px;
+        height: 350px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 20px;
+      }
+
+      .section .text {
+        flex: 1;
+      }
+
+      .section .text h2 {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+      }
+
+      .section .text p {
+        font-size: 1.1em;
+        line-height: 1.6;
+        margin-bottom: 0;
+      }
+
+      .service h2 {
+        margin-bottom: 40px;
+      }
+
+      .service .card {
+        display: flex;
+        justify-content: space-around;
+        gap: 30px;
+        flex-wrap: wrap;
+      }
+
+      .service .cards {
+        background-color: #ffffff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 30px 20px;
+        flex: 1;
+        min-width: 250px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s;
+        text-align: center;
+      }
+
+      .service .cards:hover {
+        transform: translateY(-5px);
+        transition: transform 0.3s;
+      }
+
+      .service .cards h3 {
+        font-size: 1.4em;
+        margin-bottom: 10px;
+        color: #031103;
+      }
+
+      .service .cards p {
+        font-size: 1em;
+        margin-bottom: 0;
+      }
+
+      .contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #f9f9f9;
+        padding-bottom: 100px;
+      }
+
+      .contact h2 {
+        margin-bottom: 30px;
+      }
+
+      .contact input,
+      .contact textarea {
+        width: 100%;
+        max-width: 500px;
+        padding: 15px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1em;
+      }
+
+      .contact textarea {
+        resize: vertical;
+        min-height: 150px;
+      }
+
+      .contact button {
+        width: 100%;
+        max-width: 500px;
+        padding: 15px;
+        margin-top: 10px;
+      }
+      footer {
+        background-color: #080101;
+        color: #fff;
+        text-align: center;
+        padding: 20px 5%;
+      }
+
+      #menu {
+        display: none;
+      }
+        .hamburger {
+            display: none;
+        }
+        #menu:checked+.hamburger+.navi #nav{
+            display: flex;
+        }
+      @media (max-width: 700px) {
+        .hamburger {
+            display: block;
+            color: #5160b6;
+            justify-content: space-between;
+            align-items: end;
+            cursor: pointer;
+            margin-right: 20px;
+            margin-top: 10px;
+        }
+        #menu:checked+.hamburger+.navi #nav{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .home,
+        .section {
+          flex-direction: column;
+          text-align: center;
+        }
+        .home .text h2 {
+            margin-top: 150px;
+        }
+
+        .home img,
+        .section img {
+          margin-top: 30px;
+          max-width: 80%;
+        }
+
+        nav {
+          flex-direction: column;
+        }
+
+        nav ul {
+          margin-top: 15px;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        nav ul li {
+          display: none;
+        }
+
+        .service .cards {
+          min-width: 80%;
+        }
+
+        section {
+          padding: 50px 3%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+        <nav>
+        <h2>MyBrand</h2>
+        <input type="checkbox" name="menu" id="menu">
+        <label for="menu" class="hamburger">&#9776;</label>
+        <ul class="navi">
+          <li id="nav">
+            <a href="#home">Home</a>
+        </li>
+          <li id="nav">
+            <a href="#section">About</a>
+        </li>
+          <li id="nav">
+            <a href="#service">Services</a>
+        </li>
+          <li id="nav">
+            <a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="home" id="home">
+      <div class="text">
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        <button>Get Started</button>
+      </div>
+      <img src="https://picsum.photos/200/300?grayscale" alt="" />
+    </section>
+    <section class="section" id="section">
+      <img src="https://picsum.photos/200/300?grayscale" alt="" />
+      <div class="text">
+        <h2>About Us</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+          quod.
+        </p>
+      </div>
+    </section>
+    <section class="service" id="service">
+      <h2>Our Services</h2>
+      <div class="card">
+        <div class="cards">
+          <h3>Web Design</h3>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="cards">
+          <h3>Development</h3>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="cards">
+          <h3>SEO</h3>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+      </div>
+    </section>
+    <section class="contact" id="contact">
+      <h2>Contact Us</h2>
+      <input type="text" placeholder="Your Name" />
+      <input type="email" placeholder="Email Address" />
+      <textarea placeholder="Your Message"></textarea>
+      <button>Send Message</button>
+    </section>
+    <footer>
+      <p>&copy; 2025 MyBrand -- All rights reserved.</p>
+    </footer>
+  </body>
+</html>
